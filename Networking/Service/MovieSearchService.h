@@ -9,10 +9,15 @@
 #define MovieSearchService_h
 
 @import Foundation;
+@class MovieResponse;
+
+typedef void(^MoviesSearchCompletion)(NSArray<MovieResponse*>* _Nullable movies, NSError* _Nullable error);
+
+@import Foundation;
 
 @protocol MovieSearchService <NSObject>
 
-- (void)search:(NSString*)text;
+- (void)search:(NSString* _Nonnull)text completion:(nonnull MoviesSearchCompletion)completion;
 
 @end
 

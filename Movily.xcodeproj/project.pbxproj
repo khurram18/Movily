@@ -17,6 +17,12 @@
 		A1268AF026FD86E7002A9C7D /* TMDBMovieSearchService.m in Sources */ = {isa = PBXBuildFile; fileRef = A1268AEE26FD86E7002A9C7D /* TMDBMovieSearchService.m */; };
 		A1268AF526FD8881002A9C7D /* Dependency.h in Headers */ = {isa = PBXBuildFile; fileRef = A1268AF326FD8881002A9C7D /* Dependency.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A1268AF626FD8881002A9C7D /* Dependency.m in Sources */ = {isa = PBXBuildFile; fileRef = A1268AF426FD8881002A9C7D /* Dependency.m */; };
+		A1268AF926FD93AB002A9C7D /* MovieResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = A1268AF726FD93AB002A9C7D /* MovieResponse.h */; };
+		A1268AFA26FD93AB002A9C7D /* MovieResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = A1268AF826FD93AB002A9C7D /* MovieResponse.m */; };
+		A1268AFD26FDA0D5002A9C7D /* Request.h in Headers */ = {isa = PBXBuildFile; fileRef = A1268AFB26FDA0D5002A9C7D /* Request.h */; };
+		A1268AFE26FDA0D5002A9C7D /* Request.m in Sources */ = {isa = PBXBuildFile; fileRef = A1268AFC26FDA0D5002A9C7D /* Request.m */; };
+		A1268B0126FDA77A002A9C7D /* ResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = A1268AFF26FDA77A002A9C7D /* ResponseParser.h */; };
+		A1268B0226FDA77A002A9C7D /* ResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A1268B0026FDA77A002A9C7D /* ResponseParser.m */; };
 		A177A22326FD81F300512368 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A177A22226FD81F300512368 /* AppDelegate.m */; };
 		A177A22626FD81F300512368 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A177A22526FD81F300512368 /* SceneDelegate.m */; };
 		A177A22926FD81F300512368 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A177A22826FD81F300512368 /* ViewController.m */; };
@@ -92,6 +98,12 @@
 		A1268AEE26FD86E7002A9C7D /* TMDBMovieSearchService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMDBMovieSearchService.m; sourceTree = "<group>"; };
 		A1268AF326FD8881002A9C7D /* Dependency.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dependency.h; sourceTree = "<group>"; };
 		A1268AF426FD8881002A9C7D /* Dependency.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dependency.m; sourceTree = "<group>"; };
+		A1268AF726FD93AB002A9C7D /* MovieResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieResponse.h; sourceTree = "<group>"; };
+		A1268AF826FD93AB002A9C7D /* MovieResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieResponse.m; sourceTree = "<group>"; };
+		A1268AFB26FDA0D5002A9C7D /* Request.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Request.h; sourceTree = "<group>"; };
+		A1268AFC26FDA0D5002A9C7D /* Request.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Request.m; sourceTree = "<group>"; };
+		A1268AFF26FDA77A002A9C7D /* ResponseParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponseParser.h; sourceTree = "<group>"; };
+		A1268B0026FDA77A002A9C7D /* ResponseParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResponseParser.m; sourceTree = "<group>"; };
 		A177A21E26FD81F300512368 /* Movily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A177A22126FD81F300512368 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A177A22226FD81F300512368 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -186,6 +198,8 @@
 		A1268AEC26FD8678002A9C7D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A1268AF726FD93AB002A9C7D /* MovieResponse.h */,
+				A1268AF826FD93AB002A9C7D /* MovieResponse.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,6 +207,10 @@
 		A1268AF126FD86F9002A9C7D /* TMDB */ = {
 			isa = PBXGroup;
 			children = (
+				A1268AFB26FDA0D5002A9C7D /* Request.h */,
+				A1268AFC26FDA0D5002A9C7D /* Request.m */,
+				A1268AFF26FDA77A002A9C7D /* ResponseParser.h */,
+				A1268B0026FDA77A002A9C7D /* ResponseParser.m */,
 				A1268AED26FD86E7002A9C7D /* TMDBMovieSearchService.h */,
 				A1268AEE26FD86E7002A9C7D /* TMDBMovieSearchService.m */,
 			);
@@ -277,7 +295,10 @@
 			files = (
 				A1268ADD26FD85D9002A9C7D /* Networking.h in Headers */,
 				A1268AF526FD8881002A9C7D /* Dependency.h in Headers */,
+				A1268AFD26FDA0D5002A9C7D /* Request.h in Headers */,
 				A1268AEB26FD866B002A9C7D /* MovieSearchService.h in Headers */,
+				A1268AF926FD93AB002A9C7D /* MovieResponse.h in Headers */,
+				A1268B0126FDA77A002A9C7D /* ResponseParser.h in Headers */,
 				A1268AEF26FD86E7002A9C7D /* TMDBMovieSearchService.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,8 +494,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1268B0226FDA77A002A9C7D /* ResponseParser.m in Sources */,
 				A1268AF626FD8881002A9C7D /* Dependency.m in Sources */,
+				A1268AFE26FDA0D5002A9C7D /* Request.m in Sources */,
 				A1268AF026FD86E7002A9C7D /* TMDBMovieSearchService.m in Sources */,
+				A1268AFA26FD93AB002A9C7D /* MovieResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
