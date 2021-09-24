@@ -15,6 +15,8 @@
 @protocol MoviesView <NSObject>
 
 - (void)showMovies:(NSArray<MovieResponse*>* _Nonnull)movies;
+- (void)showLoading:(BOOL)loading;
+- (void)showError:(NSString* _Nonnull)title message:(NSString* _Nonnull)message;
 
 @end
 

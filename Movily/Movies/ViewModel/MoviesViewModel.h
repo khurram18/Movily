@@ -12,7 +12,7 @@
 
 @protocol MoviesViewModel <NSObject>
 
-- (void)search:(NSString*)text;
+- (void)search:(NSString* _Nonnull)text;
 
 @end
 

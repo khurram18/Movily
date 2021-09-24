@@ -17,13 +17,14 @@
 		A1268AF026FD86E7002A9C7D /* TMDBMovieSearchService.m in Sources */ = {isa = PBXBuildFile; fileRef = A1268AEE26FD86E7002A9C7D /* TMDBMovieSearchService.m */; };
 		A1268AF526FD8881002A9C7D /* Dependency.h in Headers */ = {isa = PBXBuildFile; fileRef = A1268AF326FD8881002A9C7D /* Dependency.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A1268AF626FD8881002A9C7D /* Dependency.m in Sources */ = {isa = PBXBuildFile; fileRef = A1268AF426FD8881002A9C7D /* Dependency.m */; };
-		A1268AF926FD93AB002A9C7D /* MovieResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = A1268AF726FD93AB002A9C7D /* MovieResponse.h */; };
+		A1268AF926FD93AB002A9C7D /* MovieResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = A1268AF726FD93AB002A9C7D /* MovieResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A1268AFA26FD93AB002A9C7D /* MovieResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = A1268AF826FD93AB002A9C7D /* MovieResponse.m */; };
 		A1268AFD26FDA0D5002A9C7D /* Request.h in Headers */ = {isa = PBXBuildFile; fileRef = A1268AFB26FDA0D5002A9C7D /* Request.h */; };
 		A1268AFE26FDA0D5002A9C7D /* Request.m in Sources */ = {isa = PBXBuildFile; fileRef = A1268AFC26FDA0D5002A9C7D /* Request.m */; };
 		A1268B0126FDA77A002A9C7D /* ResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = A1268AFF26FDA77A002A9C7D /* ResponseParser.h */; };
 		A1268B0226FDA77A002A9C7D /* ResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A1268B0026FDA77A002A9C7D /* ResponseParser.m */; };
 		A1268B0A26FDB901002A9C7D /* TMDBMoviesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1268B0926FDB901002A9C7D /* TMDBMoviesViewModel.m */; };
+		A1268B0F26FE4FDD002A9C7D /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A1268B0E26FE4FDD002A9C7D /* MovieTableViewCell.m */; };
 		A177A22326FD81F300512368 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A177A22226FD81F300512368 /* AppDelegate.m */; };
 		A177A22626FD81F300512368 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A177A22526FD81F300512368 /* SceneDelegate.m */; };
 		A177A22926FD81F300512368 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A177A22826FD81F300512368 /* ViewController.m */; };
@@ -109,6 +110,8 @@
 		A1268B0826FDB901002A9C7D /* TMDBMoviesViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDBMoviesViewModel.h; sourceTree = "<group>"; };
 		A1268B0926FDB901002A9C7D /* TMDBMoviesViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMDBMoviesViewModel.m; sourceTree = "<group>"; };
 		A1268B0B26FDBA75002A9C7D /* MoviesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesView.h; sourceTree = "<group>"; };
+		A1268B0D26FE4FDD002A9C7D /* MovieTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieTableViewCell.h; sourceTree = "<group>"; };
+		A1268B0E26FE4FDD002A9C7D /* MovieTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieTableViewCell.m; sourceTree = "<group>"; };
 		A177A21E26FD81F300512368 /* Movily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A177A22126FD81F300512368 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A177A22226FD81F300512368 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -254,9 +257,10 @@
 		A1268B0526FDB4B2002A9C7D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A1268B0C26FE4FBD002A9C7D /* Cells */,
+				A1268B0B26FDBA75002A9C7D /* MoviesView.h */,
 				A177A22726FD81F300512368 /* ViewController.h */,
 				A177A22826FD81F300512368 /* ViewController.m */,
-				A1268B0B26FDBA75002A9C7D /* MoviesView.h */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -269,6 +273,15 @@
 				A1268B0926FDB901002A9C7D /* TMDBMoviesViewModel.m */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A1268B0C26FE4FBD002A9C7D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A1268B0D26FE4FDD002A9C7D /* MovieTableViewCell.h */,
+				A1268B0E26FE4FDD002A9C7D /* MovieTableViewCell.m */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		A177A21526FD81F300512368 = {
@@ -559,6 +572,7 @@
 				A177A22326FD81F300512368 /* AppDelegate.m in Sources */,
 				A177A23426FD81F300512368 /* main.m in Sources */,
 				A1268B0A26FDB901002A9C7D /* TMDBMoviesViewModel.m in Sources */,
+				A1268B0F26FE4FDD002A9C7D /* MovieTableViewCell.m in Sources */,
 				A177A22626FD81F300512368 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

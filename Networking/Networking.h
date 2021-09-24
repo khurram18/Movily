@@ -7,6 +7,7 @@
 
 #import <Networking/Dependency.h>
 #import <Networking/MovieSearchService.h>
+#import <Networking/MovieResponse.h>
 
 #import <Foundation/Foundation.h>
 

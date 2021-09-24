@@ -31,8 +31,15 @@
 @implementation TMDBMoviesViewModel (MoviesViewModel)
 
 - (void)search:(NSString*)text {
+  __block __weak typeof(self) weakSelf = self;
+  [self.view showLoading:YES];
   [self.movieSearchService search:text completion:^(NSArray<MovieResponse*>* movies, NSError* error){
-    
+    [weakSelf.view showLoading:NO];
+    if (error == nil) {
+      [weakSelf.view showMovies:movies];
+    } else {
+      [weakSelf.view showError:@"An error occurred" message:error.localizedDescription];
+    }
   }];
 }
 
