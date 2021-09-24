@@ -23,6 +23,7 @@
 		A1268AFE26FDA0D5002A9C7D /* Request.m in Sources */ = {isa = PBXBuildFile; fileRef = A1268AFC26FDA0D5002A9C7D /* Request.m */; };
 		A1268B0126FDA77A002A9C7D /* ResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = A1268AFF26FDA77A002A9C7D /* ResponseParser.h */; };
 		A1268B0226FDA77A002A9C7D /* ResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A1268B0026FDA77A002A9C7D /* ResponseParser.m */; };
+		A1268B0A26FDB901002A9C7D /* TMDBMoviesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1268B0926FDB901002A9C7D /* TMDBMoviesViewModel.m */; };
 		A177A22326FD81F300512368 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A177A22226FD81F300512368 /* AppDelegate.m */; };
 		A177A22626FD81F300512368 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A177A22526FD81F300512368 /* SceneDelegate.m */; };
 		A177A22926FD81F300512368 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A177A22826FD81F300512368 /* ViewController.m */; };
@@ -104,6 +105,10 @@
 		A1268AFC26FDA0D5002A9C7D /* Request.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Request.m; sourceTree = "<group>"; };
 		A1268AFF26FDA77A002A9C7D /* ResponseParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponseParser.h; sourceTree = "<group>"; };
 		A1268B0026FDA77A002A9C7D /* ResponseParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResponseParser.m; sourceTree = "<group>"; };
+		A1268B0726FDB4D6002A9C7D /* MoviesViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesViewModel.h; sourceTree = "<group>"; };
+		A1268B0826FDB901002A9C7D /* TMDBMoviesViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDBMoviesViewModel.h; sourceTree = "<group>"; };
+		A1268B0926FDB901002A9C7D /* TMDBMoviesViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMDBMoviesViewModel.m; sourceTree = "<group>"; };
+		A1268B0B26FDBA75002A9C7D /* MoviesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesView.h; sourceTree = "<group>"; };
 		A177A21E26FD81F300512368 /* Movily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A177A22126FD81F300512368 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A177A22226FD81F300512368 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -226,6 +231,46 @@
 			path = Public;
 			sourceTree = "<group>";
 		};
+		A1268B0326FDB494002A9C7D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A177A22126FD81F300512368 /* AppDelegate.h */,
+				A177A22226FD81F300512368 /* AppDelegate.m */,
+				A177A22426FD81F300512368 /* SceneDelegate.h */,
+				A177A22526FD81F300512368 /* SceneDelegate.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A1268B0426FDB4AB002A9C7D /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				A1268B0626FDB4BE002A9C7D /* ViewModel */,
+				A1268B0526FDB4B2002A9C7D /* ViewController */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
+		A1268B0526FDB4B2002A9C7D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A177A22726FD81F300512368 /* ViewController.h */,
+				A177A22826FD81F300512368 /* ViewController.m */,
+				A1268B0B26FDBA75002A9C7D /* MoviesView.h */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A1268B0626FDB4BE002A9C7D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A1268B0726FDB4D6002A9C7D /* MoviesViewModel.h */,
+				A1268B0826FDB901002A9C7D /* TMDBMoviesViewModel.h */,
+				A1268B0926FDB901002A9C7D /* TMDBMoviesViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		A177A21526FD81F300512368 = {
 			isa = PBXGroup;
 			children = (
@@ -253,12 +298,8 @@
 		A177A22026FD81F300512368 /* Movily */ = {
 			isa = PBXGroup;
 			children = (
-				A177A22126FD81F300512368 /* AppDelegate.h */,
-				A177A22226FD81F300512368 /* AppDelegate.m */,
-				A177A22426FD81F300512368 /* SceneDelegate.h */,
-				A177A22526FD81F300512368 /* SceneDelegate.m */,
-				A177A22726FD81F300512368 /* ViewController.h */,
-				A177A22826FD81F300512368 /* ViewController.m */,
+				A1268B0426FDB4AB002A9C7D /* Movies */,
+				A1268B0326FDB494002A9C7D /* App */,
 				A177A22A26FD81F300512368 /* Main.storyboard */,
 				A177A22D26FD81F300512368 /* Assets.xcassets */,
 				A177A22F26FD81F300512368 /* LaunchScreen.storyboard */,
@@ -517,6 +558,7 @@
 				A177A22926FD81F300512368 /* ViewController.m in Sources */,
 				A177A22326FD81F300512368 /* AppDelegate.m in Sources */,
 				A177A23426FD81F300512368 /* main.m in Sources */,
+				A1268B0A26FDB901002A9C7D /* TMDBMoviesViewModel.m in Sources */,
 				A177A22626FD81F300512368 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
