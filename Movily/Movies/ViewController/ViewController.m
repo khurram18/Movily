@@ -87,8 +87,8 @@
   [self.view addSubview:tableView];
   
   [NSLayoutConstraint activateConstraints:@[
-    [tableView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor],
-    [tableView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor],
+    [tableView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:16],
+    [tableView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-16],
     [tableView.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor],
     [tableView.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor]
   ]];
@@ -99,6 +99,8 @@
   
   tableView.tableFooterView = activityIndicatorView;
   [tableView registerClass:[MovieTableViewCell class] forCellReuseIdentifier:MovieTableViewCell.identifier];
+  tableView.allowsSelection = NO;
+  tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
   tableView.dataSource = self;
 }
 @end
