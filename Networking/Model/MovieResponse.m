@@ -7,6 +7,15 @@
 
 #import "MovieResponse.h"
 
+#import "Request.h"
+
 @implementation MovieResponse
+
+-(NSURL*)imageURL {
+  if (!self.imagePath || [self.imagePath isEqual:NSNull.null]) {
+    return nil;
+  }
+  return [Request imageURLWithPath:self.imagePath];
+}
 
 @end

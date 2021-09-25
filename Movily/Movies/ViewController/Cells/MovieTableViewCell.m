@@ -7,20 +7,48 @@
 
 #import "MovieTableViewCell.h"
 
+@import Networking;
+
+@interface MovieTableViewCell () {
+  UIImageView* movieImageView;
+}
+
+@end
+
+@interface MovieTableViewCell (Private)
+- (void)setupViews;
+@end
+
 @implementation MovieTableViewCell
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+  if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+    [self setupViews];
+  }
+  return self;
+}
 
 +(NSString*)identifier {
   return @"MovieTableViewCell";
 }
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+
+- (void)configure:(MovieResponse*)movie {
+  self.textLabel.text = movie.title;
+  [movieImageView loadImageFrom:movie.imageURL];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
+@end
 
-    // Configure the view for the selected state
+@implementation MovieTableViewCell (Private)
+
+- (void)setupViews {
+  movieImageView = [[UIImageView alloc] init];
+  movieImageView.translatesAutoresizingMaskIntoConstraints = NO;
+  [self.contentView addSubview:movieImageView];
+  
+  [NSLayoutConstraint activateConstraints:@[
+    [movieImageView.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor]
+  ]];
 }
 
 @end

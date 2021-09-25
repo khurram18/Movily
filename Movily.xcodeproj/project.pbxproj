@@ -25,6 +25,11 @@
 		A1268B0226FDA77A002A9C7D /* ResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A1268B0026FDA77A002A9C7D /* ResponseParser.m */; };
 		A1268B0A26FDB901002A9C7D /* TMDBMoviesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1268B0926FDB901002A9C7D /* TMDBMoviesViewModel.m */; };
 		A1268B0F26FE4FDD002A9C7D /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A1268B0E26FE4FDD002A9C7D /* MovieTableViewCell.m */; };
+		A1268B1126FE53D5002A9C7D /* ImageService.h in Headers */ = {isa = PBXBuildFile; fileRef = A1268B1026FE53D5002A9C7D /* ImageService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1268B1426FE5703002A9C7D /* TMDBImageService.h in Headers */ = {isa = PBXBuildFile; fileRef = A1268B1226FE5703002A9C7D /* TMDBImageService.h */; };
+		A1268B1526FE5703002A9C7D /* TMDBImageService.m in Sources */ = {isa = PBXBuildFile; fileRef = A1268B1326FE5703002A9C7D /* TMDBImageService.m */; };
+		A1268B1926FE5B71002A9C7D /* UIImageView+URL.h in Headers */ = {isa = PBXBuildFile; fileRef = A1268B1726FE5B71002A9C7D /* UIImageView+URL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1268B1A26FE5B71002A9C7D /* UIImageView+URL.m in Sources */ = {isa = PBXBuildFile; fileRef = A1268B1826FE5B71002A9C7D /* UIImageView+URL.m */; };
 		A177A22326FD81F300512368 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A177A22226FD81F300512368 /* AppDelegate.m */; };
 		A177A22626FD81F300512368 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A177A22526FD81F300512368 /* SceneDelegate.m */; };
 		A177A22926FD81F300512368 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A177A22826FD81F300512368 /* ViewController.m */; };
@@ -112,6 +117,11 @@
 		A1268B0B26FDBA75002A9C7D /* MoviesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesView.h; sourceTree = "<group>"; };
 		A1268B0D26FE4FDD002A9C7D /* MovieTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieTableViewCell.h; sourceTree = "<group>"; };
 		A1268B0E26FE4FDD002A9C7D /* MovieTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieTableViewCell.m; sourceTree = "<group>"; };
+		A1268B1026FE53D5002A9C7D /* ImageService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageService.h; sourceTree = "<group>"; };
+		A1268B1226FE5703002A9C7D /* TMDBImageService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDBImageService.h; sourceTree = "<group>"; };
+		A1268B1326FE5703002A9C7D /* TMDBImageService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMDBImageService.m; sourceTree = "<group>"; };
+		A1268B1726FE5B71002A9C7D /* UIImageView+URL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+URL.h"; sourceTree = "<group>"; };
+		A1268B1826FE5B71002A9C7D /* UIImageView+URL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+URL.m"; sourceTree = "<group>"; };
 		A177A21E26FD81F300512368 /* Movily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A177A22126FD81F300512368 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A177A22226FD81F300512368 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -176,6 +186,7 @@
 		A1268ACC26FD85D8002A9C7D /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				A1268B1626FE5B47002A9C7D /* Categories */,
 				A1268AF226FD8859002A9C7D /* Public */,
 				A1268AEC26FD8678002A9C7D /* Model */,
 				A1268AE926FD8639002A9C7D /* Service */,
@@ -199,6 +210,7 @@
 			children = (
 				A1268AF126FD86F9002A9C7D /* TMDB */,
 				A1268AEA26FD866B002A9C7D /* MovieSearchService.h */,
+				A1268B1026FE53D5002A9C7D /* ImageService.h */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -221,6 +233,8 @@
 				A1268B0026FDA77A002A9C7D /* ResponseParser.m */,
 				A1268AED26FD86E7002A9C7D /* TMDBMovieSearchService.h */,
 				A1268AEE26FD86E7002A9C7D /* TMDBMovieSearchService.m */,
+				A1268B1226FE5703002A9C7D /* TMDBImageService.h */,
+				A1268B1326FE5703002A9C7D /* TMDBImageService.m */,
 			);
 			path = TMDB;
 			sourceTree = "<group>";
@@ -282,6 +296,15 @@
 				A1268B0E26FE4FDD002A9C7D /* MovieTableViewCell.m */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		A1268B1626FE5B47002A9C7D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A1268B1726FE5B71002A9C7D /* UIImageView+URL.h */,
+				A1268B1826FE5B71002A9C7D /* UIImageView+URL.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		A177A21526FD81F300512368 = {
@@ -347,10 +370,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1268B1126FE53D5002A9C7D /* ImageService.h in Headers */,
 				A1268ADD26FD85D9002A9C7D /* Networking.h in Headers */,
 				A1268AF526FD8881002A9C7D /* Dependency.h in Headers */,
+				A1268B1926FE5B71002A9C7D /* UIImageView+URL.h in Headers */,
 				A1268AFD26FDA0D5002A9C7D /* Request.h in Headers */,
 				A1268AEB26FD866B002A9C7D /* MovieSearchService.h in Headers */,
+				A1268B1426FE5703002A9C7D /* TMDBImageService.h in Headers */,
 				A1268AF926FD93AB002A9C7D /* MovieResponse.h in Headers */,
 				A1268B0126FDA77A002A9C7D /* ResponseParser.h in Headers */,
 				A1268AEF26FD86E7002A9C7D /* TMDBMovieSearchService.h in Headers */,
@@ -548,8 +574,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1268B1526FE5703002A9C7D /* TMDBImageService.m in Sources */,
 				A1268B0226FDA77A002A9C7D /* ResponseParser.m in Sources */,
 				A1268AF626FD8881002A9C7D /* Dependency.m in Sources */,
+				A1268B1A26FE5B71002A9C7D /* UIImageView+URL.m in Sources */,
 				A1268AFE26FDA0D5002A9C7D /* Request.m in Sources */,
 				A1268AF026FD86E7002A9C7D /* TMDBMovieSearchService.m in Sources */,
 				A1268AFA26FD93AB002A9C7D /* MovieResponse.m in Sources */,

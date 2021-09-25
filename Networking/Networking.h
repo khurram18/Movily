@@ -6,8 +6,10 @@
 //
 
 #import <Networking/Dependency.h>
+#import <Networking/ImageService.h>
 #import <Networking/MovieSearchService.h>
 #import <Networking/MovieResponse.h>
+#import <Networking/UIImageView+URL.h>
 
 #import <Foundation/Foundation.h>
 

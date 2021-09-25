@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, nullable) NSString* title;
 @property (nonatomic, nullable) NSString* overview;
 @property (nonatomic, nullable) NSString* imagePath;
+@property (nonatomic, nullable, readonly) NSURL* imageURL;
 
 @end
 

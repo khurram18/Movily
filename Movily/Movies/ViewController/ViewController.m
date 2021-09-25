@@ -65,7 +65,7 @@
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
   MovieTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:MovieTableViewCell.identifier forIndexPath:indexPath];
-  cell.textLabel.text = moviesArray[indexPath.row].title;
+  [cell configure:moviesArray[indexPath.row]];
   return cell;
 }
 

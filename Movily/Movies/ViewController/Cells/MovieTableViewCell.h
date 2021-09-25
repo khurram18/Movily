@@ -7,11 +7,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class MovieResponse;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MovieTableViewCell : UITableViewCell
 
 @property (class, readonly) NSString* identifier;
+
+- (void)configure:(MovieResponse*)movie;
 
 @end
 
