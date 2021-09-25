@@ -207,8 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				A1B4A76626FF66B100EE5D7F /* Image */,
-				A1B4A76526FF66A600EE5D7F /* Search */,
 				A1268AF126FD86F9002A9C7D /* Internal */,
+				A1B4A76526FF66A600EE5D7F /* Search */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -359,9 +359,9 @@
 		A1B4A76526FF66A600EE5D7F /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				A1268AEA26FD866B002A9C7D /* MovieSearchService.h */,
 				A1268AED26FD86E7002A9C7D /* TMDBMovieSearchService.h */,
 				A1268AEE26FD86E7002A9C7D /* TMDBMovieSearchService.m */,
-				A1268AEA26FD866B002A9C7D /* MovieSearchService.h */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -369,9 +369,9 @@
 		A1B4A76626FF66B100EE5D7F /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				A1268B1026FE53D5002A9C7D /* ImageService.h */,
 				A1268B1226FE5703002A9C7D /* TMDBImageService.h */,
 				A1268B1326FE5703002A9C7D /* TMDBImageService.m */,
-				A1268B1026FE53D5002A9C7D /* ImageService.h */,
 			);
 			path = Image;
 			sourceTree = "<group>";
