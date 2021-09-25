@@ -39,6 +39,7 @@
   self.view.backgroundColor = [UIColor whiteColor];
   [self setupViews];
 }
+
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self configureViews];
@@ -52,15 +53,18 @@
   moviesArray = [[NSMutableArray alloc] initWithArray:movies];
   [tableView reloadData];
 }
+
 - (void)showLoading:(BOOL)loading {
   loading ? [activityIndicatorView startAnimating] : [activityIndicatorView stopAnimating];
 }
+
 - (void)showError:(NSString *)title message:(NSString *)message {
   UIAlertController* alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
   UIAlertAction* action = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
   [alertController addAction:action];
   [self presentViewController:alertController animated:YES completion:nil];
 }
+
 @end
 
 @implementation ViewController (TableViewDataSource)
@@ -74,9 +78,11 @@
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
   return moviesArray.count;
 }
+
 @end
 
 @implementation ViewController (SearchBarDelegate)
+
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
   NSString* searchText = searchController.searchBar.text;
   if (searchText.length == 0) {
@@ -86,6 +92,7 @@
   [tableView reloadData];
   [self.viewModel search:searchText];
 }
+
 @end
 
 @implementation ViewController (Private)
@@ -125,4 +132,5 @@
   self.definesPresentationContext = YES;
   self.navigationItem.hidesSearchBarWhenScrolling = NO;
 }
+
 @end

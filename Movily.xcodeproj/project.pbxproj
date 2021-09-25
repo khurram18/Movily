@@ -185,11 +185,11 @@
 			isa = PBXGroup;
 			children = (
 				A1268B1626FE5B47002A9C7D /* Categories */,
-				A1268AF226FD8859002A9C7D /* Public */,
 				A1268AEC26FD8678002A9C7D /* Model */,
+				A1268AF226FD8859002A9C7D /* Public */,
 				A1268AE926FD8639002A9C7D /* Service */,
-				A1268ACD26FD85D8002A9C7D /* Networking.h */,
 				A1268ACE26FD85D8002A9C7D /* Info.plist */,
+				A1268ACD26FD85D8002A9C7D /* Networking.h */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -206,9 +206,9 @@
 		A1268AE926FD8639002A9C7D /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				A1268AF126FD86F9002A9C7D /* TMDB */,
-				A1268AEA26FD866B002A9C7D /* MovieSearchService.h */,
-				A1268B1026FE53D5002A9C7D /* ImageService.h */,
+				A1B4A76626FF66B100EE5D7F /* Image */,
+				A1B4A76526FF66A600EE5D7F /* Search */,
+				A1268AF126FD86F9002A9C7D /* Internal */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -222,19 +222,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		A1268AF126FD86F9002A9C7D /* TMDB */ = {
+		A1268AF126FD86F9002A9C7D /* Internal */ = {
 			isa = PBXGroup;
 			children = (
 				A1268AFB26FDA0D5002A9C7D /* Request.h */,
 				A1268AFC26FDA0D5002A9C7D /* Request.m */,
 				A1268AFF26FDA77A002A9C7D /* ResponseParser.h */,
 				A1268B0026FDA77A002A9C7D /* ResponseParser.m */,
-				A1268AED26FD86E7002A9C7D /* TMDBMovieSearchService.h */,
-				A1268AEE26FD86E7002A9C7D /* TMDBMovieSearchService.m */,
-				A1268B1226FE5703002A9C7D /* TMDBImageService.h */,
-				A1268B1326FE5703002A9C7D /* TMDBImageService.m */,
 			);
-			path = TMDB;
+			path = Internal;
 			sourceTree = "<group>";
 		};
 		A1268AF226FD8859002A9C7D /* Public */ = {
@@ -260,8 +256,8 @@
 		A1268B0426FDB4AB002A9C7D /* Movies */ = {
 			isa = PBXGroup;
 			children = (
-				A1268B0626FDB4BE002A9C7D /* ViewModel */,
 				A1268B0526FDB4B2002A9C7D /* ViewController */,
+				A1268B0626FDB4BE002A9C7D /* ViewModel */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -332,11 +328,11 @@
 		A177A22026FD81F300512368 /* Movily */ = {
 			isa = PBXGroup;
 			children = (
-				A1268B0426FDB4AB002A9C7D /* Movies */,
 				A1268B0326FDB494002A9C7D /* App */,
+				A1268B0426FDB4AB002A9C7D /* Movies */,
 				A177A22D26FD81F300512368 /* Assets.xcassets */,
-				A177A22F26FD81F300512368 /* LaunchScreen.storyboard */,
 				A177A23226FD81F300512368 /* Info.plist */,
+				A177A22F26FD81F300512368 /* LaunchScreen.storyboard */,
 				A177A23326FD81F300512368 /* main.m */,
 			);
 			path = Movily;
@@ -358,6 +354,26 @@
 				A177A24A26FD81F300512368 /* Info.plist */,
 			);
 			path = MovilyUITests;
+			sourceTree = "<group>";
+		};
+		A1B4A76526FF66A600EE5D7F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				A1268AED26FD86E7002A9C7D /* TMDBMovieSearchService.h */,
+				A1268AEE26FD86E7002A9C7D /* TMDBMovieSearchService.m */,
+				A1268AEA26FD866B002A9C7D /* MovieSearchService.h */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		A1B4A76626FF66B100EE5D7F /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				A1268B1226FE5703002A9C7D /* TMDBImageService.h */,
+				A1268B1326FE5703002A9C7D /* TMDBImageService.m */,
+				A1268B1026FE53D5002A9C7D /* ImageService.h */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
