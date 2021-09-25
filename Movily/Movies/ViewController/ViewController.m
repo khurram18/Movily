@@ -29,6 +29,9 @@
 @interface ViewController (TableViewDataSource) <UITableViewDataSource>
 @end
 
+@interface ViewController (SearchBarDelegate) <UISearchBarDelegate>
+@end
+
 @implementation ViewController
 
 - (void)loadView {
@@ -39,7 +42,6 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self configureViews];
-  [self.viewModel search:@"machine"];
 }
 
 @end
@@ -74,6 +76,16 @@
 }
 @end
 
+@implementation ViewController (SearchBarDelegate)
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+  NSString* searchText = searchController.searchBar.text;
+  if (searchText.length == 0) {
+    return;
+  }
+  [self.viewModel search:searchText];
+}
+@end
+
 @implementation ViewController (Private)
 
 - (void)setupViews {
@@ -102,5 +114,12 @@
   tableView.allowsSelection = NO;
   tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
   tableView.dataSource = self;
+  
+  searchController.searchBar.delegate = self;
+  searchController.obscuresBackgroundDuringPresentation = NO;
+  searchController.searchBar.placeholder = @"Search Movies";
+  self.navigationItem.searchController = searchController;
+  self.definesPresentationContext = YES;
+  self.navigationItem.hidesSearchBarWhenScrolling = NO;
 }
 @end
