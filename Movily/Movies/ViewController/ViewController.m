@@ -16,7 +16,7 @@
   UISearchController* searchController;
   UITableView* tableView;
   UIActivityIndicatorView* activityIndicatorView;
-  NSArray<MovieResponse*>* moviesArray;
+  NSMutableArray<MovieResponse*>* moviesArray;
 }
 
 @end
@@ -49,7 +49,7 @@
 @implementation ViewController (MoviesView)
 
 - (void)showMovies:(NSArray<MovieResponse*>*)movies {
-  moviesArray = movies;
+  moviesArray = [[NSMutableArray alloc] initWithArray:movies];
   [tableView reloadData];
 }
 - (void)showLoading:(BOOL)loading {
@@ -82,6 +82,8 @@
   if (searchText.length == 0) {
     return;
   }
+  [moviesArray removeAllObjects];
+  [tableView reloadData];
   [self.viewModel search:searchText];
 }
 @end
@@ -113,6 +115,7 @@
   [tableView registerClass:[MovieTableViewCell class] forCellReuseIdentifier:MovieTableViewCell.identifier];
   tableView.allowsSelection = NO;
   tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+  tableView.showsVerticalScrollIndicator = NO;
   tableView.dataSource = self;
   
   searchController.searchBar.delegate = self;
