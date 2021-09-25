@@ -41,6 +41,13 @@
   detailsLabel.text = movie.overview;
 }
 
+- (void)prepareForReuse {
+  [super prepareForReuse];
+  movieImageView.image = nil;
+  titleLabel.text = nil;
+  detailsLabel.text = nil;
+}
+
 @end
 
 @implementation MovieTableViewCell (Private)
