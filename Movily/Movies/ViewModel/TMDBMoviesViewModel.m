@@ -38,7 +38,7 @@
     if (error == nil) {
       [weakSelf.view showMovies:movies];
     } else {
-      [weakSelf.view showError:@"An error occurred" message:error.localizedDescription];
+      [weakSelf.view showError:@"An error occurred" message:@"Please try again"];
     }
   }];
 }

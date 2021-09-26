@@ -38,6 +38,8 @@
 		A177A23426FD81F300512368 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A177A23326FD81F300512368 /* main.m */; };
 		A177A23E26FD81F300512368 /* MovilyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A177A23D26FD81F300512368 /* MovilyTests.m */; };
 		A177A24926FD81F300512368 /* MovilyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A177A24826FD81F300512368 /* MovilyUITests.m */; };
+		A1B4A76826FF68B900EE5D7F /* ViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B4A76726FF68B900EE5D7F /* ViewModelTests.m */; };
+		A1B4A76C26FF692E00EE5D7F /* MockMovieSearchService.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B4A76B26FF692E00EE5D7F /* MockMovieSearchService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +140,9 @@
 		A177A24426FD81F300512368 /* MovilyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovilyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A177A24826FD81F300512368 /* MovilyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovilyUITests.m; sourceTree = "<group>"; };
 		A177A24A26FD81F300512368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1B4A76726FF68B900EE5D7F /* ViewModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewModelTests.m; sourceTree = "<group>"; };
+		A1B4A76A26FF692E00EE5D7F /* MockMovieSearchService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockMovieSearchService.h; sourceTree = "<group>"; };
+		A1B4A76B26FF692E00EE5D7F /* MockMovieSearchService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockMovieSearchService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,8 +346,10 @@
 		A177A23C26FD81F300512368 /* MovilyTests */ = {
 			isa = PBXGroup;
 			children = (
+				A1B4A76926FF690200EE5D7F /* Mock */,
 				A177A23D26FD81F300512368 /* MovilyTests.m */,
 				A177A23F26FD81F300512368 /* Info.plist */,
+				A1B4A76726FF68B900EE5D7F /* ViewModelTests.m */,
 			);
 			path = MovilyTests;
 			sourceTree = "<group>";
@@ -374,6 +381,15 @@
 				A1268B1326FE5703002A9C7D /* TMDBImageService.m */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		A1B4A76926FF690200EE5D7F /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				A1B4A76A26FF692E00EE5D7F /* MockMovieSearchService.h */,
+				A1B4A76B26FF692E00EE5D7F /* MockMovieSearchService.m */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -621,6 +637,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1B4A76826FF68B900EE5D7F /* ViewModelTests.m in Sources */,
+				A1B4A76C26FF692E00EE5D7F /* MockMovieSearchService.m in Sources */,
 				A177A23E26FD81F300512368 /* MovilyTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
