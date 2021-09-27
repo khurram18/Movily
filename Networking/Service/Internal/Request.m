@@ -11,7 +11,7 @@ static NSString* kBaseURLString = @"https://api.themoviedb.org/3/";
 static NSString* kImageBaseURLString = @"https://image.tmdb.org/t/p/w500/";
 static NSString* kSearchPath = @"search/movie";
 static NSString* kApiKeyQueryName = @"api_key";
-static NSString* kApiKey = @"c7965534db621cfb79fcc14cde27bdfd";
+static NSString* kApiKey = @"place_api_key"; // Replce with actual API key
 static NSString* kSearchQueryName = @"query";
 
 
